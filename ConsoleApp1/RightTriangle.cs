@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AbstractSample
+namespace Ex32
 {
     /// <summary>
     /// 直角三角形
@@ -24,6 +24,11 @@ namespace AbstractSample
         public override float GetCircumference()
         {
             return width + height + MathF.Sqrt(width * width + height * height);
+        }
+        public override void GetBounds(out float width, out float height)
+        {
+            width = this.width;
+            height = this.height;
         }
     }
 }

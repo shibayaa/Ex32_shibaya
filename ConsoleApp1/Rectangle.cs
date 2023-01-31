@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AbstractSample
+namespace Ex32
 {
+    /// <summary>
+    /// 長方形
+    /// </summary>
     class Rectangle : Surface
     {
         readonly public float width;
@@ -20,6 +23,11 @@ namespace AbstractSample
         public override float GetCircumference()
         {
             return (width + height) * 2;
+        }
+        public override void GetBounds(out float width, out float height)
+        {
+            width = this.width;
+            height = this.height;
         }
     }
 }
